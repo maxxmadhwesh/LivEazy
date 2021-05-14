@@ -11,14 +11,13 @@ submission = ()=>{
 }
 
 loader = () =>{
-    gsap.from(".logo",{opacity:0, y:-50, scale:1.1, duration:0.75, ease:"bounce.out(1,0.7)"});
-    gsap.from(divs[0],{opacity:0, x:-50, delay:0.5});
-    gsap.from(divs[1],{opacity:0, x:50, delay:0.75});
-    gsap.from(divs[2],{opacity:0, x:-50, delay:1});
-    gsap.from(divs[3],{opacity:0, x:50, delay:1.25});
-    gsap.from("button",{opacity:0, rotate:360, scale:0.1, delay:1.5});
-    gsap.from("#success-msg",{opacity:0, delay:1.75});
-  
+    gsap.fromTo(".logo", {opacity:0, y:-50, scale:1.1}, {opacity:1, y:0, scale:1, ease:"bounce.out(1,0.7)"});
+    gsap.fromTo(divs[0], {opacity:0, x:-50}, {opacity:1, x:0, delay:0.5});
+    gsap.fromTo(divs[1], {opacity:0, x:50}, {opacity:1, x:0, delay:0.75});
+    gsap.fromTo(divs[2], {opacity:0, x:-50}, {opacity:1, x:0, delay:1});
+    gsap.fromTo(divs[3], {opacity:0, x:50}, {opacity:1, delay:1.25, x:0});
+    gsap.fromTo("button", {opacity:0, rotate:0, scale:0.1}, {opacity:1, rotate:360, scale:1, delay:1.75});
+    gsap.fromTo("#success-msg", {opacity:0, delay:2}, {opacity:1}); 
 }
 
 function responseSheet() {

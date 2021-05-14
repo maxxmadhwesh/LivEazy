@@ -26,10 +26,17 @@ body{
     min-height: 100vh;
     background: rgb(0,0,0); background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(47,47,48) 50%); 
 }
+#success-msg{
+    opacity: 0;
+    text-align: center; 
+    margin:0 auto; 
+    font-size: 0.9em; 
+    width: fit-content; 
+    color:#fff 
+}
 @media (max-width: 2000px ){
     .logo{
         font-size: 3.5em;
-        padding: 0;
     }
 
     .radioGrp{
@@ -37,6 +44,14 @@ body{
     }
     .radioGrp div{
         width:16vw;
+    }
+
+    #formHeading{
+        font-size: 2em;
+        margin-top: 50px;
+    }
+    #success-msg{
+        margin-top: 10px;
     }
 }
 
@@ -51,14 +66,22 @@ body{
     .radioGrp div{
         width:auto;
     }
+    #success-msg{
+        margin-top: 50px;
+    }
 
+}
+
+#formHeading{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .logo{
     margin: 0 auto;
     width: fit-content;
     cursor: pointer;
-    align-self: center;
     position: relative;
     font-family: 'Reggae One', cursive;
 }
@@ -69,3 +92,7 @@ body{
 .formService{
     padding-top: 1em;
 }
+.di{
+    opacity: 0;
+}
+
