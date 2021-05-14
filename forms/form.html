@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" style="overflow: hidden;">
+  <head>
+    <title>Details Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/../css/forms.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+  </head>
+  <body onload="loader()">
+    <div id="particles-js"></div>
+
+    <div class="containerForms">
+        <div class = "text-center text-capitalize logo storys" onclick="window.location.href='/../index.html'"><br>Liv Eazy</div>
+
+        <form name="google-sheet" onsubmit="postToGoogle()" class="w-75 mx-auto" id="myForm" >
+            <div class="d1 mt-3">
+                <label for="formName" class="storys">Name :</label>
+                <input name="entry.1443348041" type="text" class="form-control" id="formName" placeholder="Input Your Name" required>
+            </div>
+            <div class="d1 mt-3">
+                <label for="formAdd" class="storys">Address :</label>
+                <input name="entry.1232639318" type="text" class="form-control"  id="formAdd" placeholder="Add your Address here -" required>
+            </div>
+            <div class="d1 mt-3">
+                <label for="formNumber" class="storys">Mobile :</label>
+                <input name="entry.1298294968" type="number" class="form-control"id="formNumber" placeholder="Input your 10 digit mobile no -" required>
+            </div>
+            <div class=" d1 mt-3 ">
+                <label for="formService" class="storys">What Service are you opting for :</label><br>
+                    <select id="formService" name="entry.1656048954" placeholder="Select" required>
+                        <option value="none">Select One-</option>
+                        <option value="Taxi">Book a Ride</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="MedDelivery">Medicine Delivery</option>
+                        <option value="Mechanic">Vehicle Repair</option> 
+                    </select> 
+            </div>
+
+            <div class="d1 mt-3">
+                <label for="formDetails"class="storys">Details :</label>
+                <textarea name="entry.1905648699" class="form-control"id="formDetails" placeholder="Mention any important details regarding order... " rows="3" ></textarea>
+                <button type="submit" class="btn btn-default mt-3 btn-white btn-outline-success" >Place Order <i class="fas fa-paper-plane"></i></button>
+            </div>
+            </form>
+<h3 id="success-msg" style="text-align: center; margin:0 auto; font-size: 0.9em; width: fit-content; color:#fff"> Click on The logo to go back .</h3>
+        
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src ="/../js/particles.js"></script>
+    <script type="text/javascript" src ="/../js/app.js"></script>
+    <script type="text/javascript" src ="/../js/formOne.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
