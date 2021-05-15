@@ -34,8 +34,18 @@ body{
     width: fit-content; 
     color:#fff 
 }
+
+.logo{
+    margin: 0 auto;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Reggae One', cursive;
+}
+
 @media (max-width: 2000px ){
     .logo{
+        margin-top: 0px;
         font-size: 3.5em;
     }
 
@@ -73,18 +83,13 @@ body{
 }
 
 #formHeading{
+    color: #fff;
     position: relative;
     margin: 0 auto;
+    margin-top:10px;
     width: fit-content;
 }
 
-.logo{
-    margin: 0 auto;
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-    font-family: 'Reggae One', cursive;
-}
 
 .storys{
     color: rgb(255, 205, 205);
@@ -95,4 +100,7 @@ body{
 .di{
     opacity: 0;
 }
-
+hr{
+    background-color: #fff;
+    width:0px;
+}

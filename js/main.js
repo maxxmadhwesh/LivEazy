@@ -21,6 +21,8 @@ function iconPop(){
 //Onclick to form
 function datalineText(text, links, service){
     let url = links;
+    //using LocalStorage
+    localStorage.setItem('serviceSelected',service);
     dataLine.addEventListener("click",(url) => {
         window.location.href = links;
     } );
@@ -43,7 +45,7 @@ function hoverBox(recieved){
         case iconList[2] : datalineText("Having electricity Issues !<br> Need a certified electrician at home .<br>Click Here", "/../forms/form.html", "Electrician");
         break;
 
-        case iconList[3] : datalineText("Water not Coming !<br> Need a certified Plumber at home .<br>Click Here", "/../forms/form.html", "Plumbing");
+        case iconList[3] : datalineText("Water not Coming !<br> Need a certified Plumber at home .<br>Click Here", "/../forms/form.html", "Plumber");
         break;
 
         case iconList[4] : datalineText("Bike/Car not Working !<br> Need a certified mechanic at home .<br>Click Here", "/../forms/form.html", "Vehicle Repair");
@@ -88,9 +90,9 @@ submission = ()=>{
 
 //Loader FormOne 
 loader = () =>{
-    let selection = "hey man";
+    selection = localStorage.getItem('serviceSelected') ;
 
-    /*switch(selection){
+    switch(selection){
         case "Book a Ride":
             header.innerHTML="Schedule a Ride : FORM";
             $("#formDetails").attr('placeholder',"Mention any important details regarding order... \nAlso add if you would like an Auto or a Car .");
@@ -112,8 +114,9 @@ loader = () =>{
             $("#formDetails").attr('placeholder',"Mention any important details regarding order... \nTry to write about the vehicle and model if you can . ");
             break;
     }
-*/
+
     gsap.fromTo(".logo", {opacity:0, y:-50, scale:1.1}, {opacity:1, y:0, scale:1, ease:"bounce.out(1,0.7)"});
+    gsap.to("hr",{width:250});
     gsap.from(header,{y:-50});
     gsap.fromTo(divs[0], {opacity:0, x:-50}, {opacity:1, x:0, delay:0.5});
     gsap.fromTo(divs[1], {opacity:0, x:50}, {opacity:1, x:0, delay:0.75});
@@ -131,7 +134,8 @@ function postToGoogle() {
     var field2 = $("#formAdd").val();
     var field3 = $("#formNumber").val();
     var number = "+91" + field3;
-    var check = optionService ;
+    var check = localStorage.getItem("serviceSelected") ;
+
     var field4 = $("#formDetails").val();
 
     if(field3<999999999 || field3>9999999999){
